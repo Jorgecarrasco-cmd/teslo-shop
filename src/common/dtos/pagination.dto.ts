@@ -7,6 +7,7 @@ export class PaginationDto {
     @Type( () => Number)
     limit?: number;
     
+    @IsOptional()
     @Type( () => Number)
     @Min(0)
     offset?: number

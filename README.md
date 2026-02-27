@@ -28,3 +28,5 @@ docker-compose up -d
 ```
 npm run start:dev
 ```
+
+7. ```Ejecutar el endpoint del SEED para llenar la base de datos con data de prueba (desarrollo)```

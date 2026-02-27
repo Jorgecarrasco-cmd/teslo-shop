@@ -2,7 +2,6 @@ import { IsArray, IsIn, IsInt, IsNumber, IsOptional, IsPositive, IsString, IsStr
 
 export class CreateProductDto {
 
-    //opcionales
     @IsString()
     @IsOptional()
     description?: string;
@@ -16,7 +15,7 @@ export class CreateProductDto {
     @IsPositive()
     @IsOptional()
     stock?: number
-    //requeridas
+
     @IsString()
     @MinLength(1)
     title!: string;
@@ -32,6 +31,11 @@ export class CreateProductDto {
     @IsString({ each: true })
     @IsArray()
     tags!: string[]
+
+    @IsString({ each: true })
+    @IsArray()
+    @IsOptional()
+    images?: string[]
 
     @IsIn(['men', 'women', 'unisex'])
     gender!: string;
