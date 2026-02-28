@@ -3,6 +3,8 @@ import { ProductsService } from './products.service';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { PaginationDto } from 'src/common/dtos/pagination.dto';
+import { ApiCreatedResponse } from '@nestjs/swagger';
+import { Product } from './entities/product.entity';
 
 @Controller('products')
 export class ProductsController {
